@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="care.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="care.mjs"></script>
+  </head>
+
+  <body>
+    <div class="navigationBar">
+      <h1 class="title">Uplifted Teens</h1>
+      <a href="home.html"> home </a>
+      <a href="innerCare.html"> inner-care </a>
+      <a class="fourth" href="care.html"> mental health </a>
+      <a href="index.html"> physical health </a>
+    </div>
+
+    <audio autoplay>
+      <source src="assets/lofi-background-music-337568.mp3" type="audio/mpeg" />
+    </audio>
+
+    <p class="fourthSection">
+      <!-- how can mental health affect teenagers-->
+      Poor mental health in teenagers can significantly impact their overall
+      well-being, academic performance, social relationships, and
+      decision-making abilities. It can lead to difficulties with concentration,
+      memory, and academic success, as well as social isolation and strained
+      relationships with peers and family. Additionally, untreated mental health
+      issues in teens can increase the risk of substance abuse, self-harm, and
+      suicide.
+    </p>
+
+    <div class="secondSection" h1>
+      Coping Mechanisms:
+      <br />
+      - journaling your daily thoughts and feelings <br />
+      - seeking social support (trusted adult, friends, or family) <br />
+      - yoga and meditation <br />
+      - sufficient sleep <br />
+      - positive affirmations <br />
+      - setting healthy boundaries
+  
+
+    <section>
+      <h2>How are you feeling today?</h2>
+      <form id="mood-form">
+        <label
+          ><input class="1" type="radio" name="mood" value="okay" /> just
+          okay!</label
+        ><br />
+        <label
+          ><input class="2" type="radio" name="mood" value="meh" /> meh
+          :/</label
+        ><br />
+        <label
+          ><input class="3" type="radio" name="mood" value="happy" /> happy
+          :)</label
+        ><br />
+        <label
+          ><input class="4" type="radio" name="mood" value="down" /> down
+          :(</label
+        ><br /><br />
+        <button class="submit">Submit</button>
+      </form>
+
+    </section>
+
+
+    <div class="center">
+      <div id="spotify-box" width="750px" height="380" frameBorder="0" allowtransparency="true" allow="encrypted-media"></div>
+    </div>
+
+  </div>
+
+  <p class="firstSection">
+    <!--why is mental health important for teenagers-->
+    Mental Health is our well-being. It impacts how we think, feel, and act.
+    It reflects on how we ultimately cope with stress, how we build
+    relationships, and make healthy decisions for our own good.
+  </p>
+
+
+    <div class="thirdSection">
+      <p class="info2">
+        50% of teens are affected by a mental illness by 14 years old
+      </p>
+      <p class="info3">
+        Anxiety and depression are most common among teenagers
+      </p>
+      <h2>IT IS OKAY TO NOT BE OKAY!</h2>
+      <p class="info4">
+        A teen's life is often thought to be more carefree and less stressful
+      </p>
+      than that of adults
+      <p class="info5">
+        Social media has been one of the biggest impacts on teens developing
+        brains
+      </p>
+    </div>
+
+   
+    
+
+    <script>
+      document
+        .getElementById("mood-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const mood = document.querySelector('input[name="mood"]:checked');
+
+          if (!mood) {
+            alert("Please select a mood.");
+            return;
+          }
+
+          let embedURL = "";
+
+          if (mood.value === "happy") {
+            embedURL =
+              "https://open.spotify.com/embed/playlist/37i9dQZF1EIgG2NEOhqsD7";
+          } else if (mood.value === "meh") {
+            embedURL =
+              "https://open.spotify.com/embed/playlist/3js3hpQgKTaVtxqSuU3sLg";
+          } else if (mood.value === "down") {
+            embedURL =
+              "https://open.spotify.com/embed/playlist/1JMl7aLuL15cv2Q4mbwkwm";
+          } else {
+            embedURL =
+              "https://open.spotify.com/embed/playlist/4XZJaL26H3P75iqd7tMkuP";
+          }
+
+          document.getElementById("spotify-box").innerHTML = `
+          <iframe src="${embedURL}"
+                  width="750px"
+                  height="380"
+                  frameborder="0"
+                  allowtransparency="true"
+                  allow="encrypted-media">
+          </iframe>`;
+        });
+    </script>
+
+    <div class="footer">
+      <p class="info7">Uplifted Teens</p>
+      <p class="info8">Made by Ivy, Viannah, and Jenna</p>
+      <p class="info9">
+        Made using
+        <a class="linky" href="https://codesandbox.io/dashboard"
+          >https://codesandbox.io/dashboard</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

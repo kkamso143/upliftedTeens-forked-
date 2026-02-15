@@ -1,0 +1,17 @@
+body {
+  background-color: gray;
+}
+
+button {
+  background-color: white;
+}
+
+.idk {
+  background-color: pink;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
